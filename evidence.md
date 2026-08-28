@@ -10,7 +10,7 @@ At commit `5049740121308881add6db4fd09af4c53f014073`, the target Linux machine s
 |---|---|---|---|
 | Shared daemon is active and owns the three expected loopback listeners | [Layer 2 real-OS/systemd+cgroup] | `artifacts/systemd_service.txt` (`ActiveState=active`, `MainPID`), `artifacts/listeners.txt` (127.0.0.1:8001/8005/8006), `artifacts/launcher_status.txt` | PASS |
 | Each listener PID belongs to the service cgroup and process tree | [Layer 2 real-OS/procfs+cgroup] | `artifacts/listener_pid_cgroup_service.txt` (`listener_pid`, `/proc/PID/cgroup`, `service-cgroup-match=PASS`), `artifacts/systemd_process_tree.txt` | PASS |
-| Context7, sequential-thinking, and Slack accept MCP initialize | [Layer 2 real-HTTP/MCP] | `request_responses.jsonl` has one raw request and HTTP 200 JSON-RPC result for each service; per-service headers/bodies retained | PASS |
+| Context7, sequential-thinking, and Slack accept MCP initialize | [Layer 2 real-HTTP/MCP] | Per-service curl headers/bodies retain each HTTP 200 JSON-RPC result; `request_responses.jsonl` is an assembled index of the submitted initialize payloads and those retained responses | PASS |
 | Codex CLI lists the shared trio; Claude strict MCP configuration names the trio, while Claude CLI lists Slack | [Layer 2 real-CLI/config] | `artifacts/codex_mcp_list.txt` lists context7/sequential-thinking/slack; `artifacts/claude_strict_names.txt` names the trio; `artifacts/claude_mcp_list.txt` lists Slack | PASS |
 | Agent settings and cgroup memory ceilings are unlimited | [Layer 2 real-CLI/OS] | `artifacts/codex_agents_block.txt`, `artifacts/agents_slice.txt`, `artifacts/cgroup_limits.txt` | PASS |
 | A fresh real Codex CLI turn works inside tmux | [Layer 2 real-CLI/real-LLM] | `artifacts/tmux_codex_output.txt` contains exact `ES_CODEX_MCP_V2_OK`; `artifacts/tmux_codex_rc.txt` is `0` | PASS |
@@ -29,7 +29,7 @@ At commit `5049740121308881add6db4fd09af4c53f014073`, the target Linux machine s
 
 - The installed configuration worked on this Linux machine at the recorded time and commit.
 - The real service owned the expected listeners, and each listener PID's `/proc/PID/cgroup` matched `mcp-daemon.service`.
-- The three raw protocol initialize exchanges returned HTTP 200 JSON-RPC results.
+- The three direct curl initialize calls returned HTTP 200 JSON-RPC results retained in the per-service header/body artifacts.
 - The actual Codex CLI completed the recorded tmux turn, and the focused 72-test suite passed, including 19 supervisor tests run with the live service briefly stopped and automatically restored to avoid fixed-port collisions.
 - Pre/post SHA, tracked-file digest, diff-index, worktree, and cache checks remained unchanged and clean.
 

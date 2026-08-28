@@ -1,22 +1,18 @@
 ● mcp-daemon.service - Shared MCP daemon
      Loaded: loaded (/home/REDACTED/.config/systemd/user/mcp-daemon.service; enabled; preset: enabled)
-     Active: active (running) since Thu 2026-08-27 18:42:51 PDT; 23min ago
-   Main PID: 280963 (bash)
-      Tasks: 48 (limit: 76498)
-     Memory: 151.9M (peak: 238.7M)
-        CPU: 3.525s
+     Active: active (running) since Thu 2026-08-27 19:27:29 PDT; 2min 7s ago
+   Main PID: 808863 (bash)
+      Tasks: 30 (limit: 76498)
+     Memory: 87.3M (peak: 180.4M)
+        CPU: 1.410s
      CGroup: /user.slice/user-1000.slice/user@1000.service/app.slice/mcp-daemon.service
-             ├─280963 bash /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh run
-             ├─280981 bash /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh loop context7
-             ├─280988 node --require /home/REDACTED/.config/mcp-daemon/force-loopback.cjs /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/supergateway/dist/index.js --stdio "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child context7 " --outputTransport streamableHttp --stateful --sessionTimeout 600000 --port 8001
-             ├─281052 bash /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh loop sequential-thinking
-             ├─281059 node --require /home/REDACTED/.config/mcp-daemon/force-loopback.cjs /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/supergateway/dist/index.js --stdio "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child sequential-thinking " --outputTransport streamableHttp --stateful --sessionTimeout 600000 --port 8005
-             ├─281128 bash /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh loop slack
-             ├─281138 /home/REDACTED/go/bin/slack-mcp-server -transport http
-             ├─442353 /bin/sh -c "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child sequential-thinking "
-             ├─442354 node /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/.bin/mcp-server-sequential-thinking
-             ├─442357 /bin/sh -c "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child context7 "
-             ├─442359 node /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/.bin/context7-mcp
-             └─572784 sleep 1
+             ├─808863 bash /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh run
+             ├─808883 bash /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh loop context7
+             ├─808890 node --require /home/REDACTED/.config/mcp-daemon/force-loopback.cjs /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/supergateway/dist/index.js --stdio "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child context7 " --outputTransport streamableHttp --stateful --sessionTimeout 600000 --port 8001
+             ├─808979 bash /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh loop sequential-thinking
+             ├─808986 node --require /home/REDACTED/.config/mcp-daemon/force-loopback.cjs /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/supergateway/dist/index.js --stdio "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child sequential-thinking " --outputTransport streamableHttp --stateful --sessionTimeout 600000 --port 8005
+             ├─809117 bash /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh loop slack
+             ├─809127 /home/REDACTED/go/bin/slack-mcp-server -transport http
+             └─834420 sleep 1
 
-Aug 27 18:42:51 Jeff-Ubuntu systemd[3069]: Started mcp-daemon.service - Shared MCP daemon.
+Aug 27 19:27:29 Jeff-Ubuntu systemd[3069]: Started mcp-daemon.service - Shared MCP daemon.

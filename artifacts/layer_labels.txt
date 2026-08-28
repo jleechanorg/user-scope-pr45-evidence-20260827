@@ -1,5 +1,5 @@
 S1 service/listeners: [Layer 2 real-OS/systemd+cgroup]
-S2 raw MCP initialize exchanges: [Layer 2 real-HTTP/MCP]
+S2 direct MCP initialize calls with retained curl headers/bodies: [Layer 2 real-HTTP/MCP]
 S3 Codex/Claude client configuration: [Layer 2 real-CLI/config]
 S4 systemd/cgroup settings: [Layer 2 real-CLI/OS]
 S5 tmux Codex turn: [Layer 2 real-CLI/real-LLM]

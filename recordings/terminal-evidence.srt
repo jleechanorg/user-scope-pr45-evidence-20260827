@@ -29,12 +29,12 @@ TEST: Real Codex CLI turn inside tmux
 RESULT: PASS — exact ES_CODEX_MCP_V2_OK response; rc=0
 
 7
-00:00:14,700 --> 00:00:46,500
+00:00:15,300 --> 00:00:50,620
 TEST: pytest tests/test_mcp_installer.py, test_mcp_hygiene.py,
 test_install_script.py, test_backup_home_script.py, test_mcp_supervisor.py
 RESULT: PASS — 72 passed; bash -n + shellcheck PASS
 
 8
-00:00:46,500 --> 00:00:47,800
+00:00:50,620 --> 00:00:51,280
 TEST: restoration, gitleaks/OAuth scans, and post-run git state
 RESULT: PASS — service 3/3 listeners, scans clean, PRE=POST SHA

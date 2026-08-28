@@ -2,7 +2,7 @@
   "bundle_version": "1.1",
   "run_id": "portable-shared-mcp-linux-live",
   "iteration": 3,
-  "bundle_timestamp": "2026-08-27T19:06:25-07:00",
+  "bundle_timestamp": "2026-08-27T19:29:37-07:00",
   "evidence_mode": "real-callstack-real-services",
   "provenance": {
     "git_head": "5049740121308881add6db4fd09af4c53f014073",
@@ -20,9 +20,9 @@
   },
   "runtime": {
     "service": "mcp-daemon.service",
-    "main_pid": 280963,
+    "main_pid": 808863,
     "control_group": "/user.slice/user-1000.slice/user@1000.service/app.slice/mcp-daemon.service",
-    "listener_pids": {"context7": 280988, "sequential-thinking": 281059, "slack": 281138},
+    "listener_pids": {"context7": 808890, "sequential-thinking": 808986, "slack": 809127},
     "endpoints": {
       "context7": "http://127.0.0.1:8001/mcp",
       "sequential-thinking": "http://127.0.0.1:8005/mcp",

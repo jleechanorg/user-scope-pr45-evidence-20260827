@@ -1,20 +1,7 @@
-# user_scope PR #45 — portable shared MCP evidence
+# Portable shared MCP evidence bundle — iteration 3
 
-This public repository contains the sanitized terminal and raw runtime evidence for [`jleechanorg/user_scope` PR #45](https://github.com/jleechanorg/user_scope/pull/45) at commit `5049740121308881add6db4fd09af4c53f014073`.
+Start with [`evidence.md`](evidence.md), then verify [`checksums.sha256`](checksums.sha256). Machine-readable scenario results are in [`run.json`](run.json); provenance and runtime identifiers are in [`metadata.json`](metadata.json); `request_responses.jsonl` is an assembled index of the submitted initialize payloads and retained responses, while the primary curl response headers and bodies are under `artifacts/`; terminal recordings and inspected frames (51 extracted PNGs under `recordings/frames/`, with representative copies at the top level) are under `recordings/`.
 
-## Evidence
+This bundle is sanitized and records one Linux host and the three named MCP endpoints only. Public clean-machine reproduction instructions and media are linked from `evidence.md`; publication does not turn the single-host recording into a second-machine execution claim.
 
-![Terminal evidence: service containment, three MCP initialize calls, tmux Codex, 72 tests, and repository-state match](terminal-evidence.gif)
-
-- [Evidence report](evidence.md)
-- [Clean-machine reproduction gist](https://gist.github.com/jleechan2015/cdec09831b02b9f0a30f86b9c51a17af)
-- [Downloadable MP4](https://github.com/jleechanorg/user-scope-pr45-evidence-20260827/releases/download/pr45-iteration-003/terminal-evidence.mp4)
-- [Sanitized evidence archive](https://github.com/jleechanorg/user-scope-pr45-evidence-20260827/releases/download/pr45-iteration-003/iteration_003-sanitized.tar.gz)
-
-Verify the checked-in files with:
-
-```bash
-sha256sum -c public-checksums.sha256
-```
-
-The evidence proves the recorded behavior on one Linux host. It does not prove long-duration freeze immunity, execution on a second machine, macOS behavior, or unavailable WorldAI/Aside endpoints.
+Capture command: `capture_evidence.sh` (recorded via asciinema). The script performs pre/post SHA and repository-state checks, direct listener PID/cgroup/service proof, real MCP initialize calls, a real tmux Codex turn, 72 focused tests (including the supervisor module under controlled fixed-port isolation), shell checks, and redacted gitleaks/OAuth-marker scans.
