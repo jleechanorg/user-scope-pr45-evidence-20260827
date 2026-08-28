@@ -7,7 +7,9 @@
   "provenance": {
     "git_head": "5049740121308881add6db4fd09af4c53f014073",
     "git_base": "origin/main",
+    "merge_base": "6296b90b240c338c24ebcefa69fc393f3e58420a",
     "branch": "codex/linux-portable-mcp-integration",
+    "git_branch": "codex/linux-portable-mcp-integration",
     "remote_branch": "origin/codex/linux-portable-mcp",
     "remote_head": "5049740121308881add6db4fd09af4c53f014073",
     "working_tree_clean": true,

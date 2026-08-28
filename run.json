@@ -2,11 +2,11 @@
   "run_id": "portable-shared-mcp-linux-live",
   "iteration": 3,
   "scenarios": [
-    {"id": "S1", "name": "service-active-listeners-cgroup-contained", "status": "PASS", "layer": "Layer 2 real-OS/systemd+cgroup", "artifacts": ["artifacts/systemd_service.txt", "artifacts/listeners.txt", "artifacts/listener_pid_cgroup_service.txt", "artifacts/systemd_process_tree.txt", "artifacts/launcher_status.txt"]},
-    {"id": "S2", "name": "three-real-mcp-initialize-calls", "status": "PASS", "layer": "Layer 2 real-HTTP/MCP", "artifacts": ["request_responses.jsonl", "artifacts/context7_headers.txt", "artifacts/context7_body.txt", "artifacts/sequential-thinking_headers.txt", "artifacts/sequential-thinking_body.txt", "artifacts/slack_headers.txt", "artifacts/slack_body.txt"]},
-    {"id": "S3", "name": "codex-and-claude-client-hygiene", "status": "PASS", "layer": "Layer 2 real-CLI/config", "artifacts": ["artifacts/codex_mcp_list.txt", "artifacts/claude_mcp_list.txt", "artifacts/claude_strict_names.txt"]},
-    {"id": "S4", "name": "agents-memory-unlimited", "status": "PASS", "layer": "Layer 2 real-CLI/OS", "artifacts": ["artifacts/agents_slice.txt", "artifacts/cgroup_limits.txt", "artifacts/codex_agents_block.txt"]},
-    {"id": "S5", "name": "real-tmux-codex-turn", "status": "PASS", "layer": "Layer 2 real-CLI/real-LLM", "artifacts": ["artifacts/tmux_codex_output.txt", "artifacts/tmux_codex_rc.txt"]},
-    {"id": "S6", "name": "focused-tests-secret-scans-and-source-stability", "status": "PASS", "layer": "Layer 1 focused tests + Layer 2 repository-state", "artifacts": ["artifacts/pytest_output.txt", "artifacts/gitleaks_report.txt", "artifacts/git_pre_state.txt", "artifacts/git_post_state.txt", "artifacts/git_state_diff.txt", "recordings/terminal-evidence.cast"]}
+    {"id": "S1", "name": "service-active-listeners-cgroup-contained", "status": "PASS", "errors": [], "layer": "Layer 2 real-OS/systemd+cgroup", "artifacts": ["artifacts/systemd_service.txt", "artifacts/listeners.txt", "artifacts/listener_pid_cgroup_service.txt", "artifacts/systemd_process_tree.txt", "artifacts/launcher_status.txt"]},
+    {"id": "S2", "name": "three-real-mcp-initialize-calls", "status": "PASS", "errors": [], "layer": "Layer 2 real-HTTP/MCP", "artifacts": ["request_responses.jsonl", "artifacts/context7_headers.txt", "artifacts/context7_body.txt", "artifacts/sequential-thinking_headers.txt", "artifacts/sequential-thinking_body.txt", "artifacts/slack_headers.txt", "artifacts/slack_body.txt"]},
+    {"id": "S3", "name": "codex-and-claude-client-hygiene", "status": "PASS", "errors": [], "layer": "Layer 2 real-CLI/config", "artifacts": ["artifacts/codex_mcp_list.txt", "artifacts/claude_mcp_list.txt", "artifacts/claude_strict_names.txt"]},
+    {"id": "S4", "name": "agents-memory-unlimited", "status": "PASS", "errors": [], "layer": "Layer 2 real-CLI/OS", "artifacts": ["artifacts/agents_slice.txt", "artifacts/cgroup_limits.txt", "artifacts/codex_agents_block.txt"]},
+    {"id": "S5", "name": "real-tmux-codex-turn", "status": "PASS", "errors": [], "layer": "Layer 2 real-CLI/real-LLM", "artifacts": ["artifacts/tmux_codex_output.txt", "artifacts/tmux_codex_rc.txt"]},
+    {"id": "S6", "name": "focused-tests-secret-scans-and-source-stability", "status": "PASS", "errors": [], "layer": "Layer 1 focused tests + Layer 2 repository-state", "artifacts": ["artifacts/pytest_output.txt", "artifacts/gitleaks_report.txt", "artifacts/git_pre_state.txt", "artifacts/git_post_state.txt", "artifacts/git_state_diff.txt", "recordings/terminal-evidence.cast"]}
   ]
 }
