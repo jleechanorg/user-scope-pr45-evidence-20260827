@@ -1,0 +1,6 @@
+S1 service/listeners: [Layer 2 real-callstack]
+S2 raw MCP initialize exchanges: [Layer 2 real-callstack]
+S3 Codex/Claude client configuration: [Layer 2 real-callstack]
+S4 systemd/cgroup settings: [Layer 2 real-callstack]
+S5 tmux Codex turn: [Layer 2 real-callstack]
+S6 focused tests and git stability: [Layer 1 unit + repository-state checks]

@@ -1,0 +1,4 @@
+Name                 Url                        Bearer Token Env Var  Status   Auth       
+context7             http://127.0.0.1:8001/mcp  -                     enabled  Unsupported
+sequential-thinking  http://127.0.0.1:8005/mcp  -                     enabled  Unsupported
+slack                http://127.0.0.1:8006/mcp  -                     enabled  Unknown    

@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+X-Powered-By: Express
+cache-control: no-cache, no-transform
+connection: keep-alive
+content-type: text/event-stream
+mcp-session-id: 8d59e2bb-9932-4d45-9699-2c97de4e7af5
+x-accel-buffering: no
+Date: Fri, 28 Aug 2026 01:12:54 GMT
+Transfer-Encoding: chunked
+

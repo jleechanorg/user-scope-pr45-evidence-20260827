@@ -1,0 +1,3 @@
+memory.high=max
+memory.max=max
+memory.swap.max=max

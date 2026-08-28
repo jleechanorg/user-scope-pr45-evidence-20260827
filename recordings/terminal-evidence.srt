@@ -1,0 +1,31 @@
+1
+00:00:00,000 --> 00:00:02,500
+Git provenance and pre-run repository state
+
+2
+00:00:02,500 --> 00:00:04,000
+Commit log, source diff, and remote containment
+
+3
+00:00:04,000 --> 00:00:08,500
+Live systemd service, listener PID to /proc cgroup, and process tree
+
+4
+00:00:08,500 --> 00:00:12,000
+Raw MCP initialize exchanges: context7, sequential-thinking, slack
+
+5
+00:00:12,000 --> 00:00:18,000
+Real Codex and Claude client configuration paths
+
+6
+00:00:18,000 --> 00:00:31,000
+Real Codex CLI turn inside tmux
+
+7
+00:00:31,000 --> 00:00:40,000
+53 focused tests, shell checks, and redacted secret scans
+
+8
+00:00:40,000 --> 00:00:45,000
+Post-run SHA and canonical git state match

@@ -1,0 +1,5 @@
+[UP] context7 :8001
+[UP] sequential-thinking :8005
+[UP] slack :8006
+SKIP worldai :8010 (WORLDARCHITECT_ROOT unavailable)
+SKIP aside-mcp :8013 (aside command unavailable)

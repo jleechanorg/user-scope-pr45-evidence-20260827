@@ -1,0 +1,5 @@
+Checking MCP server health…
+
+claude.ai Google Drive: https://drivemcp.googleapis.com/mcp/v1 - ✔ Connected
+claude-design: https://api.anthropic.com/v1/design/mcp (HTTP) - ✔ Connected
+slack: http://127.0.0.1:8006/mcp (HTTP) - ✔ Connected

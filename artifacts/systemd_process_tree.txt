@@ -1,0 +1,42 @@
+● mcp-daemon.service - Shared MCP daemon
+     Loaded: loaded (/home/REDACTED/.config/systemd/user/mcp-daemon.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2026-08-27 12:46:38 PDT; 5h 26min ago
+   Main PID: 915597 (bash)
+      Tasks: 129 (limit: 76498)
+     Memory: 552.3M (peak: 651.8M swap: 29.4M swap peak: 29.8M)
+        CPU: 38.046s
+     CGroup: /user.slice/user-1000.slice/user@1000.service/app.slice/mcp-daemon.service
+             ├─ 915597 bash /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh run
+             ├─ 915610 bash /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh loop context7
+             ├─ 915617 node --require /home/REDACTED/.config/mcp-daemon/force-loopback.cjs /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/supergateway/dist/index.js --stdio "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child context7 " --outputTransport streamableHttp --stateful --sessionTimeout 600000 --port 8001
+             ├─ 915706 bash /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh loop sequential-thinking
+             ├─ 915713 node --require /home/REDACTED/.config/mcp-daemon/force-loopback.cjs /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/supergateway/dist/index.js --stdio "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child sequential-thinking " --outputTransport streamableHttp --stateful --sessionTimeout 600000 --port 8005
+             ├─ 915796 bash /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh loop slack
+             ├─ 915806 /home/REDACTED/go/bin/slack-mcp-server -transport http
+             ├─4015250 /bin/sh -c "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child context7 "
+             ├─4015251 node /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/.bin/context7-mcp
+             ├─4015268 /bin/sh -c "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child sequential-thinking "
+             ├─4015269 node /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/.bin/mcp-server-sequential-thinking
+             ├─4030212 /bin/sh -c "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child context7 "
+             ├─4030213 node /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/.bin/context7-mcp
+             ├─4030286 /bin/sh -c "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child sequential-thinking "
+             ├─4030287 node /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/.bin/mcp-server-sequential-thinking
+             ├─4038231 /bin/sh -c "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child context7 "
+             ├─4038232 node /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/.bin/context7-mcp
+             ├─4038317 /bin/sh -c "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child sequential-thinking "
+             ├─4038321 node /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/.bin/mcp-server-sequential-thinking
+             ├─4065202 /bin/sh -c "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child context7 "
+             ├─4065203 node /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/.bin/context7-mcp
+             ├─4065350 /bin/sh -c "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child sequential-thinking "
+             ├─4065351 node /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/.bin/mcp-server-sequential-thinking
+             ├─4073826 /bin/sh -c "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child context7 "
+             ├─4073827 node /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/.bin/context7-mcp
+             ├─4073861 /bin/sh -c "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child sequential-thinking "
+             ├─4073862 node /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/.bin/mcp-server-sequential-thinking
+             ├─4080328 /bin/sh -c "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child context7 "
+             ├─4080329 node /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/.bin/context7-mcp
+             ├─4080348 /bin/sh -c "env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child sequential-thinking "
+             ├─4080349 node /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/.bin/mcp-server-sequential-thinking
+             └─4094855 sleep 1
+
+Aug 27 12:46:38 Jeff-Ubuntu systemd[3069]: Started mcp-daemon.service - Shared MCP daemon.
