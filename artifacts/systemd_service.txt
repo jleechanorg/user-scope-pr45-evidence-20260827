@@ -1,6 +1,6 @@
-MainPID=268923
+MainPID=280963
 NRestarts=0
 ControlGroup=/user.slice/user-1000.slice/user@1000.service/app.slice/mcp-daemon.service
-MemoryCurrent=111165440
+MemoryCurrent=158093312
 ActiveState=active
 SubState=running

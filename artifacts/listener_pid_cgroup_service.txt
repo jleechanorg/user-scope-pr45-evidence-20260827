@@ -1,55 +1,74 @@
 service_cgroup=/user.slice/user-1000.slice/user@1000.service/app.slice/mcp-daemon.service
-listener_pid=268946
+listener_pid=280988
 cmdline=node --require /home/REDACTED/.config/mcp-daemon/force-loopback.cjs /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/supergateway/dist/index.js --stdio env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child context7  --outputTransport streamableHttp --stateful --sessionTimeout 600000 --port 8001 
 /proc cgroup:
-/proc/268946/cgroup: 0::/user.slice/user-1000.slice/user@1000.service/app.slice/mcp-daemon.service
+/proc/280988/cgroup: 0::/user.slice/user-1000.slice/user@1000.service/app.slice/mcp-daemon.service
 process-tree:
 systemd,1 splash
   `-systemd,3069 --user
-      `-bash,268923 /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh run
-          `-bash,268939 /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh loop context7
-              `-MainThread,268946 --require /home/REDACTED/.config/mcp-daemon/force-loopback.cjs...
-                  |-{MainThread},268948
-                  |-{MainThread},268949
-                  |-{MainThread},268950
-                  |-{MainThread},268951
-                  |-{MainThread},268952
-                  `-{MainThread},268954
+      `-bash,280963 /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh run
+          `-bash,280981 /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh loop context7
+              `-MainThread,280988 --require /home/REDACTED/.config/mcp-daemon/force-loopback.cjs...
+                  |-sh,442357 -c env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child context7 
+                  |   `-MainThread,442359 /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/.bin/context7-mcp
+                  |       |-{MainThread},442373
+                  |       |-{MainThread},442374
+                  |       |-{MainThread},442375
+                  |       |-{MainThread},442376
+                  |       |-{MainThread},442377
+                  |       `-{MainThread},442380
+                  |-{MainThread},280989
+                  |-{MainThread},280990
+                  |-{MainThread},280991
+                  |-{MainThread},280992
+                  |-{MainThread},280993
+                  `-{MainThread},280994
 service-cgroup-match=PASS
-listener_pid=268990
+listener_pid=281059
 cmdline=node --require /home/REDACTED/.config/mcp-daemon/force-loopback.cjs /home/REDACTED/.local/share/mcp-daemon/runtime/node_modules/supergateway/dist/index.js --stdio env -u NODE_OPTIONS /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh child sequential-thinking  --outputTransport streamableHttp --stateful --sessionTimeout 600000 --port 8005 
 /proc cgroup:
-/proc/268990/cgroup: 0::/user.slice/user-1000.slice/user@1000.service/app.slice/mcp-daemon.service
+/proc/281059/cgroup: 0::/user.slice/user-1000.slice/user@1000.service/app.slice/mcp-daemon.service
 process-tree:
 systemd,1 splash
   `-systemd,3069 --user
-      `-bash,268923 /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh run
-          `-bash,268983 /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh loop sequential-thinking
-              `-MainThread,268990 --require /home/REDACTED/.config/mcp-daemon/force-loopback.cjs...
-                  |-{MainThread},268991
-                  |-{MainThread},268992
-                  |-{MainThread},268993
-                  |-{MainThread},268994
-                  |-{MainThread},268995
-                  `-{MainThread},268997
+      `-bash,280963 /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh run
+          `-bash,281052 /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh loop sequential-thinking
+              `-MainThread,281059 --require /home/REDACTED/.config/mcp-daemon/force-loopback.cjs...
+                  |-sh,442353 -c ...
+                  |   `-MainThread,442354 ...
+                  |       |-{MainThread},442366
+                  |       |-{MainThread},442367
+                  |       |-{MainThread},442368
+                  |       |-{MainThread},442369
+                  |       |-{MainThread},442370
+                  |       `-{MainThread},442379
+                  |-{MainThread},281060
+                  |-{MainThread},281061
+                  |-{MainThread},281062
+                  |-{MainThread},281063
+                  |-{MainThread},281064
+                  `-{MainThread},281065
 service-cgroup-match=PASS
-listener_pid=269036
+listener_pid=281138
 cmdline=/home/REDACTED/go/bin/slack-mcp-server -transport http 
 /proc cgroup:
-/proc/269036/cgroup: 0::/user.slice/user-1000.slice/user@1000.service/app.slice/mcp-daemon.service
+/proc/281138/cgroup: 0::/user.slice/user-1000.slice/user@1000.service/app.slice/mcp-daemon.service
 process-tree:
 systemd,1 splash
   `-systemd,3069 --user
-      `-bash,268923 /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh run
-          `-bash,269026 /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh loop slack
-              `-slack-mcp-serve,269036 -transport http
-                  |-{slack-mcp-serve},269037
-                  |-{slack-mcp-serve},269038
-                  |-{slack-mcp-serve},269039
-                  |-{slack-mcp-serve},269040
-                  |-{slack-mcp-serve},269041
-                  |-{slack-mcp-serve},269042
-                  |-{slack-mcp-serve},269043
-                  |-{slack-mcp-serve},269098
-                  `-{slack-mcp-serve},269099
+      `-bash,280963 /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh run
+          `-bash,281128 /home/REDACTED/.config/mcp-daemon/start-mcp-daemons.sh loop slack
+              `-slack-mcp-serve,281138 -transport http
+                  |-{slack-mcp-serve},281139
+                  |-{slack-mcp-serve},281140
+                  |-{slack-mcp-serve},281141
+                  |-{slack-mcp-serve},281142
+                  |-{slack-mcp-serve},281143
+                  |-{slack-mcp-serve},281144
+                  |-{slack-mcp-serve},281145
+                  |-{slack-mcp-serve},281175
+                  |-{slack-mcp-serve},281176
+                  |-{slack-mcp-serve},331050
+                  |-{slack-mcp-serve},331051
+                  `-{slack-mcp-serve},360341
 service-cgroup-match=PASS

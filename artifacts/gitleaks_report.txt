@@ -1,2 +1,2 @@
-[90m6:42PM[0m [32mINF[0m scan completed in 182ms
-[90m6:42PM[0m [32mINF[0m no leaks found
+[90m7:07PM[0m [32mINF[0m scan completed in 298ms
+[90m7:07PM[0m [32mINF[0m no leaks found
