@@ -4,4 +4,4 @@ This is Layer 2 real-callstack evidence captured on the target Linux machine aga
 
 The terminal session was captured as asciicast, rendered to GIF, encoded to MP4 with burned-in captions, and sampled at one frame per second with `ffmpeg`. Sample frames were visually inspected. Paths, session identifiers, and potential credential values are sanitized or withheld. The explicit Google OAuth marker scan checks for common `GOCSPX-`, `ya29.`, `1//`, and `AIza...` forms without printing matching values.
 
-The evidence is local-only. It has not been published as a gist, release asset, or PR attachment.
+The checksum-bound local bundle is published as a sanitized public archive, with its GIF embedded and its MP4 directly downloadable from PR #45. A linked unlisted gist provides the exact branch/SHA checkout, dependencies, commands, expected results, and public media links. Publication improves independent reproducibility but does not change the recorded single-host scope.
