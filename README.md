@@ -4,7 +4,7 @@ This public repository contains the sanitized terminal and raw runtime evidence 
 
 ## Evidence
 
-![Terminal evidence: service containment, three MCP initialize calls, tmux Codex, 53 tests, and repository-state match](terminal-evidence.gif)
+![Terminal evidence: service containment, three MCP initialize calls, tmux Codex, 72 tests, and repository-state match](terminal-evidence.gif)
 
 - [Evidence report](evidence.md)
 - [Clean-machine reproduction gist](https://gist.github.com/jleechan2015/cdec09831b02b9f0a30f86b9c51a17af)

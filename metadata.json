@@ -33,7 +33,7 @@
   "summary": {
     "scenarios": 6,
     "passed": 6,
-    "supplementary_tests": 53,
+    "supplementary_tests": 72,
     "secret_scans": {"gitleaks": "PASS", "google_oauth_marker_scan": "PASS"},
     "publication": {
       "source_pr": "https://github.com/jleechanorg/user_scope/pull/45",

@@ -1,31 +1,40 @@
 1
-00:00:00,000 --> 00:00:02,500
-Git provenance and pre-run repository state
+00:00:00,000 --> 00:00:02,300
+TEST: Git provenance and pre-run repository-state checks
+RESULT: PASS — SHA, branch, and clean worktree recorded
 
 2
-00:00:02,500 --> 00:00:04,000
-Commit log, source diff, and remote containment
+00:00:02,300 --> 00:00:04,000
+TEST: Commit log, safe code diff, and remote containment
+RESULT: PASS — expected remote branch contains HEAD
 
 3
-00:00:04,000 --> 00:00:08,500
-Live systemd service, listener PID to /proc cgroup, and process tree
+00:00:04,000 --> 00:00:06,000
+TEST: systemd service, listener PID, and /proc cgroup
+RESULT: PASS — mcp-daemon.service owns all 3 loopback listeners
 
 4
-00:00:08,500 --> 00:00:12,000
-Raw MCP initialize exchanges: context7, sequential-thinking, slack
+00:00:06,000 --> 00:00:07,500
+TEST: MCP initialize — context7, sequential-thinking, slack
+RESULT: PASS — all 3 POST /mcp calls return JSON-RPC HTTP 200
 
 5
-00:00:12,000 --> 00:00:18,000
-Real Codex and Claude client configuration paths
+00:00:07,500 --> 00:00:08,700
+TEST: Codex CLI lists shared trio; Claude strict config names trio
+RESULT: PASS — Claude CLI lists Slack; no claim it exposes all three
 
 6
-00:00:18,000 --> 00:00:31,000
-Real Codex CLI turn inside tmux
+00:00:08,700 --> 00:00:15,300
+TEST: Real Codex CLI turn inside tmux
+RESULT: PASS — exact ES_CODEX_MCP_V2_OK response; rc=0
 
 7
-00:00:31,000 --> 00:00:40,000
-53 focused tests, shell checks, and redacted secret scans
+00:00:15,300 --> 00:00:45,200
+TEST: pytest tests/test_mcp_installer.py, test_mcp_hygiene.py,
+test_install_script.py, test_backup_home_script.py, test_mcp_supervisor.py
+RESULT: PASS — 72 passed; bash -n + shellcheck PASS
 
 8
-00:00:40,000 --> 00:00:45,000
-Post-run SHA and canonical git state match
+00:00:45,200 --> 00:00:47,700
+TEST: restoration, gitleaks/OAuth scans, and post-run git state
+RESULT: PASS — service 3/3 listeners, scans clean, PRE=POST SHA
